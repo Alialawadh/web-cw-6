@@ -78,14 +78,20 @@ function getBookById(bookId, books){
     
         let input3 = prompt("السعر");
 
-        array43.push({name1: input , price: input3 , quantity: input2});
+        array43.push({name1: input  , quantity: input2 , price: input3});
 
         input = prompt("ادخل السلعه");
       }
 
+      let total = 0;
       
+      for(bill of array43){
+          if (input == "انتهيت"){
+              total = total + parseInt(bill.price) * parseInt(bill.quantity);
+          }
+      }
 
      
-
+      console.log(total);
  
  
